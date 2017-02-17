@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+ 
+<config>
+    <modules>
+        <Webonise_TestModule>
+            <version>0.1.0</version>
+        </Webonise_TestModule>
+    </modules>
+
+    <frontend>
+        <routers>
+            <Webonise_TestModule>
+                <use>standard</use>
+                <args>
+                    <module>Webonise_TestModule</module>
+                    <frontName>Webonise_TestModule</frontName>
+                </args>
+            </Webonise_TestModule>
+        </routers>
+    </frontend>
+
+    <admin>
+	  	<routers>
+	    	<Webonise_TestModule>
+	     	<use>admin</use>
+		    	<args>
+		      		<module>Webonise_TestModule</module>
+		      		<frontName>admin_TestModule</frontName>
+		     	</args>
+	    	</Webonise_TestModule>
+	  	</routers>
+	</admin>   
+	<global>
+		  <helpers>
+		    <TestModule>
+		      	<class>Webonise_TestModule_Helper</class>
+		    </TestModule>
+		  </helpers>
+	</global>
+	<adminhtml>
+		 <menu>
+			   <Webonise_TestModule module="TestModule">
+				     <title>TestModule</title>
+				     <sort_order>100</sort_order>
+				     <children>
+					      <Webonise_TestModule module="TestModule">
+						        <title>TestModule</title>
+						        <sort_order>0</sort_order>
+						        <action>admin_TestModule/adminhtml_index</action>
+					      </Webonise_TestModule>
+				     </children>
+			   </Webonise_TestModule>
+		 </menu>
+	</adminhtml>
+</config>

@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+ 
+<config>
+    <modules>
+        <Inchoo_HelloDeveloper>
+            <version>0.1.0</version>
+        </Inchoo_HelloDeveloper>
+    </modules>
+
+    <frontend>
+        <routers>
+            <HelloDeveloper>
+                <use>standard</use>
+                <args>
+                    <module>Inchoo_HelloDeveloper</module>
+                    <frontName>hellodeveloper</frontName>
+                </args>
+            </HelloDeveloper>
+        </routers>
+    </frontend>
+
+    <admin>
+	  	<routers>
+	    	<Inchoo_HelloDeveloper>
+	     	<use>admin</use>
+		    	<args>
+		      		<module>Inchoo_HelloDeveloper</module>
+		      		<frontName>admin_hellodeveloper</frontName>
+		     	</args>
+	    	</Inchoo_HelloDeveloper>
+	  	</routers>
+	</admin>   
+	<global>
+		  <helpers>
+		    <HelloDeveloper>
+		      	<class>Inchoo_HelloDeveloper_Helper</class>
+		    </HelloDeveloper>
+		  </helpers>
+	</global>
+	<adminhtml>
+		 <menu>
+			   <Inchoo_HelloDeveloper module="HelloDeveloper">
+				     <title>HelloWorld</title>
+				     <sort_order>100</sort_order>
+				     <children>
+					      <Inchoo_HelloDeveloper module="HelloDeveloper">
+						        <title>Hello World</title>
+						        <sort_order>0</sort_order>
+						        <action>admin_hellodeveloper/adminhtml_index</action>
+					      </Inchoo_HelloDeveloper>
+				     </children>
+			   </Inchoo_HelloDeveloper>
+		 </menu>
+	</adminhtml>
+</config>
