@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Webonise_TestModule>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Webonise_TestModule>
+    </modules>
+</config>
