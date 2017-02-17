@@ -4,7 +4,7 @@ class Inchoo_HelloDeveloper_IndexController extends Mage_Core_Controller_Front_A
 {
     public function indexAction()
     {
-        echo 'Hello inchoo developer...';
+        echo 'Hello inchoo developer';
         return true;
     }
  

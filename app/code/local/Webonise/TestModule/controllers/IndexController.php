@@ -4,7 +4,7 @@ class Webonise_TestModule_IndexController extends Mage_Core_Controller_Front_Act
 {
     public function indexAction()
     {
-        echo 'Hello test developer...';
+        echo 'Hello test developer';
         return true;
     }
  
